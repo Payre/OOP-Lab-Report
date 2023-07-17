@@ -22,13 +22,13 @@ class Time
         time1.second = d.second + e.second;
         if (time1.second >= 60)
         {
+            time1.minute = time1.minute + time1.second/60;
             time1.second = time1.second%60;
-            time1.minute +=1;
         }
         if (time1.minute >= 60)
         {
             time1.minute = time1.minute%60;
-            time1.hour +=1;
+            time1.hour++;
         }
         return time1;
     }
