@@ -37,7 +37,7 @@ class Time
     {
         if (hour>12)
         {
-            std::cout << hour - 12<< " hour :" << minute << " minute :" << second << std::endl;
+            std::cout << hour -12<< " hour :" << minute << " minute :" << second << std::endl;
         }
         else
         {

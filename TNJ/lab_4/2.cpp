@@ -11,18 +11,15 @@ using namespace std;
 class String
 {
     char *str;
-    int len;
     public:
     //constructor
     String()
     {
-        len= 0;
-        str = new char[len+1];
+        str = new char[30];
     }
     String(char const *str1)
     {
-        len = strlen(str1);
-        str = new char[len+1];
+        str = new char[30];
         strcpy(str, str1);
     }
     //methods
