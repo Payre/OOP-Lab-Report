@@ -14,21 +14,12 @@ class Time
         minute = 0;
         second = 0;
     }
-    Time(Time &b, Time&c)
-    {
-        std::cout<<"Enter the time: "<<std::endl;
-        std::cin>>b.hour>>b.minute>>b.second;
-        std::cout<<"Enter the time: "<<std::endl;
-        std::cin>>c.hour>>c.minute>>c.second;
-        
-    }
     Time add(Time &d, Time &e)
     {
         Time time1;
         time1.hour = d.hour + e.hour;
         time1.minute = d.minute + e.minute;
         time1.second = d.second + e.second;
-        std::cout<<time1.minute;
         if (time1.second >= 60)
         {
             time1.second = time1.second%60;
@@ -46,6 +37,10 @@ class Time
         if (hour>12)
         {
             std::cout << hour - 12<< " hour :" << minute << " minute :" << second << std::endl;
+        }
+        else
+        {
+            Display24HourFormat();
         }
     }
     void Display24HourFormat()
@@ -69,12 +64,11 @@ int main()
     std::cout<<"Enter Hour, Minute, and Second: (for 1)"<<std::endl;
     std::cin>>hour>>minute>>second;
     Time t1(hour, minute, second);
-    std::cout<<"Enter Hour, Minute, and Second: (for 1)"<<std::endl;
+    std::cout<<"Enter Hour, Minute, and Second: (for 2)"<<std::endl;
     std::cin>>hour>>minute>>second;
     Time t2(hour, minute, second);
     Time t3 = t3.add(t1, t2);
 
-    t1.Display12HourFormat();
-    t2.Display12HourFormat();
+    t3.Display12HourFormat();
     t3.Display24HourFormat();
 }
