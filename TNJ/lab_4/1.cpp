@@ -27,8 +27,9 @@ class Time
         }
         if (time1.minute >= 60)
         {
+            time1.hour = time1.hour + time1.minute/60;
             time1.minute = time1.minute%60;
-            time1.hour++;
+
         }
         return time1;
     }
