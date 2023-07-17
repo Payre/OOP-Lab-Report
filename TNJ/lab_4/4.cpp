@@ -28,7 +28,7 @@ class ParkRate
         charge = c.charge;
         hour = c.hour;
         rate = c.rate;
-        std::cout<<"Value Copied";
+        std::cout<<"Value Copied"<<std::endl;
     }
     void display()
     {
