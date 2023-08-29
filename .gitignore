@@ -1,1 +1,4 @@
 *.exe
+ignore.cpp
+/.vscode
+/TNJ/.vscode
