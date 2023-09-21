@@ -1,4 +1,4 @@
-/*WAP that illustrates the oop concept*/
+/*q1. WAP that illustrates the oop concept*/
 #include <iostream>
 using namespace std;
 class Student
