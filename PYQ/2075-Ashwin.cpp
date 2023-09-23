@@ -1,5 +1,5 @@
 
-/*WAP to explain the importance of object as function argument and returning object.*/
+/*WAP to explain the importance of object as function argument and returning object.
 
 #include <iostream>
 class Complex
@@ -31,5 +31,43 @@ int main()
 	b.getdata();
 	c = c.addition(a, b);
 	c.showdata();
+	return 0;
+}*/
+
+/*rethrow exceptoin*/
+#include<iostream>
+using namespace std;
+void rethrowdemo(int x, int y)
+{
+	try
+	{
+		if (y != 0)
+		{
+			cout << "The division is: " << (x / y) << endl;
+		}
+		else
+		{
+			throw(y);
+		}
+	}
+	catch(int z)
+	{
+		cout << "gomenosai, i cannot do this"<<endl;
+		throw;
+	}
+}
+int main()
+{
+	int a, b;
+	cout << "Enter a, b" << endl;
+	cin >> a >> b;
+	try
+	{
+		rethrowdemo(a, b);
+	}
+	catch(int p)
+		{
+			cout << "Stop being a pussy!";
+		}
 	return 0;
 }

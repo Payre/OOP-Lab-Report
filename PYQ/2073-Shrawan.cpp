@@ -23,13 +23,13 @@ public:
 		temp.second = a.second + b.second;
 		if (temp.second >= 60)
 		{
-			temp.second -= 60;
-			temp.minute++;
+			temp.minute = temp.minute + (temp.second/60);
+			temp.second = temp.second % 60;
 		}
 		if (temp.minute >= 60)
 		{
-			temp.minute -= 60;
-			temp.hour++;
+			temp.hour = temp.hour + (temp.hour / 60);
+			temp.minute = temp.minute % 60;
 		}
 		return temp;
 	}

@@ -40,7 +40,7 @@ int main()
 	return 0;
 }*/
 
-/*WAP to add two time objects using opeartor overloading.*/
+/*WAP to add two time objects using opeartor overloading.
 #include <iostream>
 
 using namespace std;
@@ -79,5 +79,42 @@ int main()
 	Time t1(2, 20, 30), t2(2, 20, 30), t3;
 	t3 = t1 + t2;
 	t3.showdata();
+	return 0;
+}*/
+/*Expalme for template function overloading*/
+#include<iostream>
+using namespace std;
+int max(int a, int b)
+{
+	if(a>b)
+	{
+		return a;
+	}
+	else
+	{
+		return b;
+	}
+}
+template<class T>
+T max(T a, T b, T c)
+{
+	if (a > b && b > c)
+	{
+		return a;
+	}
+	else if (b > a && b > c)
+	{
+		return b;
+	}
+	else
+	{
+		return c;
+	}
+}
+int main()
+{
+	int a = 3, b = 4, c = 5;
+	cout << "The great among 2 are: " << max(a, b);
+	cout << "The great among 3 are: " << max(a, b, c);
 	return 0;
 }
